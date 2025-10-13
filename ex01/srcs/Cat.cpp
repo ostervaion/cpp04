@@ -4,9 +4,8 @@
 Cat::Cat(const Cat &other)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
-	_type = other.getType();
-	delete _brain;
-	_brain = new Brain(*(other.getBrain()));
+	_brain = NULL;
+	(*this) = other;
 }
 
 Cat::Cat()
@@ -22,7 +21,8 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other)
 	{
 		_type = other._type;
-		delete _brain;
+		if (this->_brain)
+			delete _brain;
 		_brain = new Brain(*(other.getBrain()));
 	}
 	return (*this);
@@ -31,7 +31,8 @@ Cat &Cat::operator=(const Cat &other)
 Cat::~Cat()
 {
 	std::cout << "Cat destructor called" << std::endl;
-	delete _brain;
+	if (_brain)
+		delete _brain;
 }
 
 void	Cat::makeSound() const

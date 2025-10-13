@@ -12,8 +12,8 @@
 
 NAME	= Animals
 FLAGS	= -Wall -Wextra -Werror -std=c++98 -I Include
-SRC_DIR = srcs
-SRCS	= $(SRC_DIR)Animal.cpp $(SRC_DIR)Dog.cpp $(SRC_DIR)Cat.cpp $(SRC_DIR)main.cpp
+SRC_DIR = srcs/
+SRCS	= $(SRC_DIR)Animal.cpp $(SRC_DIR)Dog.cpp $(SRC_DIR)Cat.cpp $(SRC_DIR)Brain.cpp $(SRC_DIR)main.cpp
 OBJS	= $(SRCS:.cpp=.o)
 CC		= c++
 
