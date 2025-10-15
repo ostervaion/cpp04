@@ -8,8 +8,8 @@ class Animal
 	protected:
 		std::string _type;
 	public:
-		virtual ~Animal() = 0;
+		virtual ~Animal();
 		virtual void	makeSound() const = 0;
-		virtual std::string getType() const = 0;
+		virtual std::string getType() const;
 	};
 #endif
