@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME	= Animals
-FLAGS	= -Wall -Wextra -Werror -std=c++98 -I Include
+FLAGS	= -Wall -Wextra -Werror -std=c++98 -I Include -glldb
 SRC_DIR = srcs/
 SRCS	= $(SRC_DIR)AMateria.cpp $(SRC_DIR)Character.cpp $(SRC_DIR)Cure.cpp $(SRC_DIR)Ice.cpp \
 			$(SRC_DIR)main.cpp $(SRC_DIR)MateriaSource.cpp

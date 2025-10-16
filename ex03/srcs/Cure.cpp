@@ -5,7 +5,7 @@ Cure::Cure(const Cure &other) : AMateria(other._type)
 	std::cout << "Cure copy constructor" << std::endl;
 }
 
-Cure::Cure() : AMateria("ice")
+Cure::Cure() : AMateria("cure")
 {
 	std::cout << "Cure default constructor" << std::endl;
 }

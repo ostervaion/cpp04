@@ -97,5 +97,6 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-	_mat[idx]->use(target);
+	if (_mat[idx] != NULL)
+		_mat[idx]->use(target);
 }
